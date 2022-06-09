@@ -21,6 +21,7 @@
             android:background="@drawable/dark_gradient" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="10dp"
@@ -50,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/nunito_sans_semibold"
-                android:maxLines="6"
+                android:maxLines="5"
                 android:textColor="@color/light_white"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -64,12 +65,35 @@
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/nunito_sans"
                 android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageDetails"
                 tool:layout_editor_absoluteX="17dp"
-                tool:text="By Andrew Zilsker"
-                app:layout_constraintStart_toStartOf="parent"/>
+                tool:text="By Andrew Zilsker" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/viewMoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:padding="5dp"
+                android:text="@string/view_more"
+                android:textColor="@color/yellow"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/crimson"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

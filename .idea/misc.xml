@@ -3,14 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1285" />
+        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/drawable/custom_circle_ripple.xml" value="0.1285" />
+        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/drawable/custom_splash_theme.xml" value="0.1" />
         <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/drawable/dark_gradient.xml" value="0.164" />
+        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1285" />
+        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1285" />
         <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/drawable/text_count_bg.xml" value="0.164" />
         <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout-v23/image_detail_item.xml" value="0.31666666666666665" />
         <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/bottomsheet_image_details.xml" value="0.176" />
-        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/fragment_image_details.xml" value="0.1" />
+        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/bottomsheet_image_details.xml" value="0.2" />
+        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/fragment_image_details.xml" value="0.176" />
         <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/fragment_image_grid.xml" value="0.1" />
-        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/image_detail_item.xml" value="0.22" />
+        <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/image_detail_item.xml" value="0.2" />
         <entry key="..\:/Users/team/AndroidStudioProjects/NASAGridApp/app/src/main/res/layout/image_item.xml" value="0.152" />
       </map>
     </option>

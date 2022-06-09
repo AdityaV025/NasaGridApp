@@ -9,18 +9,21 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nasagridapp.app.model.ImageModel
 import com.example.nasagridapp.app.ui.details.adapter.ImageDetailsAdapter
+import com.example.nasagridapp.app.ui.details.bottomsheet.ImageDetailsBottomSheet
 import com.example.nasagridapp.app.ui.grid.viewmodel.ImageGridViewModel
 import com.example.nasagridapp.app.utils.SnapHelperOneByOne
 import com.example.nasagridapp.databinding.FragmentImageDetailsBinding
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class ImageDetailsFragment : Fragment() {
+class ImageDetailsFragment : Fragment(), ImageDetailsAdapter.OnItemClickListener {
 
     private lateinit var binding: FragmentImageDetailsBinding
     private var selectedImagePosition: Int = 0
     private val adapter: ImageDetailsAdapter by inject()
     private val viewModel by sharedViewModel<ImageGridViewModel>()
+    private lateinit var bottomSheet: ImageDetailsBottomSheet
+    private lateinit var imageListDetails: List<ImageModel>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,11 +38,13 @@ class ImageDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupObservers()
+        adapter.setupItemClickListener(this)
     }
 
     private fun setupObservers() {
         viewModel.imageList.observe(viewLifecycleOwner) {
             setupRecyclerView(it as ArrayList<ImageModel>)
+            imageListDetails = it
         }
     }
 
@@ -62,6 +67,12 @@ class ImageDetailsFragment : Fragment() {
                 binding.totalImageCountText.text = "$positionIndex / $listSize"
             }
         })
+    }
+
+    override fun onViewMoreClick(itemPosition: Int) {
+        bottomSheet = ImageDetailsBottomSheet(imageListDetails[itemPosition])
+        val fm = childFragmentManager
+        bottomSheet.show(fm,tag)
     }
 
 }
