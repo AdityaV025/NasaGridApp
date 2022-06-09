@@ -75,6 +75,7 @@ class ImageDetailsAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     })
                     .into(holder.binding.fullImage)
                 holder.binding.viewMoreText.setOnClickListener { listener.onViewMoreClick(position) }
+                holder.binding.backIcon.setOnClickListener { listener.onBackClick() }
             }
         }
     }
@@ -83,6 +84,7 @@ class ImageDetailsAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     interface OnItemClickListener {
         fun onViewMoreClick(itemPosition: Int)
+        fun onBackClick()
     }
 
     inner class ImageDetailViewHolder(val binding: ImageDetailItemBinding) :

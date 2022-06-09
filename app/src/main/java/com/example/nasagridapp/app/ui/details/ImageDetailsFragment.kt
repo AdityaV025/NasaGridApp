@@ -75,4 +75,8 @@ class ImageDetailsFragment : Fragment(), ImageDetailsAdapter.OnItemClickListener
         bottomSheet.show(fm,tag)
     }
 
+    override fun onBackClick() {
+        activity?.onBackPressed()
+    }
+
 }

@@ -23,6 +23,10 @@ class ImageDetailsBottomSheet(var imageDetails: ImageModel) : BottomSheetDialogF
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupViews()
+    }
+
+    private fun setupViews() {
         binding.closeBtSheetIcon.setOnClickListener { dismiss() }
         binding.imageTitleBtSheet.text = imageDetails.title
         binding.imageDetailsBtSheet.text = imageDetails.explanation
